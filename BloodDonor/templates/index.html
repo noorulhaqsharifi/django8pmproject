@@ -4,7 +4,7 @@
     {% load staticfiles %}
      <script src="{% static '/js/validations.js' %}" type="text/javascript"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Blood Bank</title>
 
 
 
@@ -77,12 +77,12 @@
         {% endif %}
 
         {% if type == "h_donor" %}
-        <form action="//" method="post">
+        <form action="/donorlogin/" method="post">
             {% csrf_token %}
         <table align="center" border="0">
-            <tr><th><h2><font color="blue">{{ message }}</font></h2></th></tr>
+            <tr><th><h2><font color="red">{{ message }}</font></h2></th></tr>
             <tr><th height="50" width="200"> Donor Login Page </th></tr>
-            <tr><th height="50" width="200"> <input type="text" placeholder="Username" required name="d_uname"> </th></tr>
+            <tr><th height="50" width="200"> <input type="email" placeholder="Username" required name="d_uname"> </th></tr>
             <tr><th height="50" width="200"> <input type="password" placeholder="Password" required name="d_pass"> </th></tr>
             <tr><th height="50" width="200"> <input type="submit" value="Login"> </th></tr>
             <tr><th>
@@ -96,11 +96,12 @@
         {% endif %}
 
         {% if type == "h_organization" %}
-        <form action="//" method="post">
+        <form action="/organization_login/" method="post">
             {% csrf_token %}
         <table align="center" border="0">
+            <tr><th><h2><font color="red">{{ message }}</font></h2></th></tr>
             <tr><th height="50" width="200"> Organization Login Page </th></tr>
-            <tr><th height="50" width="200"> <input type="text" placeholder="Username" required name="o_uname"> </th></tr>
+            <tr><th height="50" width="200"> <input type="email" placeholder="Username" required name="o_uname"> </th></tr>
             <tr><th height="50" width="200"> <input type="password" placeholder="Password" required name="o_pass"> </th></tr>
             <tr><th height="50" width="200"> <input type="submit" value="Login"> </th></tr>
         </table>

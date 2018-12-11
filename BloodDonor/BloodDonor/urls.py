@@ -22,16 +22,22 @@ from bd import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-
     path('',views.openHomePage ),
     path('openHomePage/',views.openHomePage ),
 
     path('openDonorLogin/',views.openDonorLogin),
+    path('opendonorhome/',views.opendonorhome),
+
     path('openDonorRegister/',views.openDonorRegister),
+    path('donorlogin/',views.donorlogin),
+    path('donor_update_profile/',views.donorUpdateProfile),
+    path('donorupdate/',views.donorUpdate),
+
+    path('organization_login/',views.organization_login),
+
     path('getCityFromState/',views.getCityFromState),
     path('registerDonor/',views.registerDonor),
 
     path('openOrganizationLogin/',views.openOrganizationLogin),
-
 
 ]
